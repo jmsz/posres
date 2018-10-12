@@ -15,10 +15,13 @@ STRIP_G_ExtGroundWidth            0.00 ! External ground potential (if in a grou
 STRIP_G_TopStripWidth             0.025 ! 0.6 was default
 STRIP_G_TopGapWidth               0.025 !
 STRIP_G_TopNumber                   5 !
+<<<<<<< HEAD
 
 STRIP_G_BotStripWidth             0.025 !
 STRIP_G_BotGapWidth               0.025 !
 STRIP_G_BotNumber                   5 !
+=======
+>>>>>>> 8e4fc31f062c017dc3c2e0335f07bdd8b411ae1f
 
 SIMION_G_GridSize                0.005 ! grid size in cm
 SIMION_G_EpsScale                16.0 ! epsilon scale relative to epsilon_0
