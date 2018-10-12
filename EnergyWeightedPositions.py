@@ -299,14 +299,32 @@ for gamma in gammaList:
 for gamma in three_strip_events:
     e_tot = GetGammaEnergy(gamma)
     n_tot = GetGammaNumberOfInteractions(gamma)
+    e1
+    e2
+    e3
+    e4
+    e5
+    e6
+    e7
+    e8
+    e9
+    x1
+    x2
+    x3
+    x4
+    x5
+    x6
+    x7
+    x8
+    x9
     for interaction in gamma:
         pos = GetInteractionPosition(interaction)
         z = pos[0]
         x = pos[1]
         y = pos[2]
         e = GetInteractionEnergy(interaction)
-    e1 = GetInteractionEnergy(interaction)
     if -0.5 <= x <= 0:
+        e1
     elif 0 <= x <= 0.5:
     elif 0.5 <= x <= 1:
     else:

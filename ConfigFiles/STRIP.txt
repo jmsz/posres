@@ -2,22 +2,23 @@
 #Geometry file for a typical STRIP detector
 ###################################################
 
-STRIP_G_PasLayThickness          -0.005 !
-STRIP_G_Radius                    0.06 ! #0.01 for pass layer
-STRIP_G_Height                    0.1 ! 1.5
-STRIP_G_TopContactDepth           0.005 !
-STRIP_G_BotContactDepth           0.005 !
+STRIP_G_PasLayThickness          -0.01 !
+STRIP_G_Radius                    0.10 !
+STRIP_G_Height                    1.50 !
+STRIP_G_TopContactDepth           0.10 !
+STRIP_G_BotContactDepth           0.10 !
 STRIP_G_ImpTop                   -1.05 ! five percent gradient
 STRIP_G_ImpBot                   -1.00 !
 STRIP_G_Spacing                   0.00 ! No spacing
 STRIP_G_ExtGroundWidth            0.00 ! External ground potential (if in a grounded container)
 
-TRIP_G_TopStripWidth               0.025 ! 0.6 was default
-STRIP_G_TopGapWidth                0.026!
-STRIP_G_TopNumber                  3 ! 53 for full coverage
-STRIP_G_BotStripWidth              0.025!
-STRIP_G_BotGapWidth                0.026!
-STRIP_G_BotNumber                  3 !
+STRIP_G_TopStripWidth             0.025 ! 0.6 was default
+STRIP_G_TopGapWidth               0.025 !
+STRIP_G_TopNumber                   5 !
+
+STRIP_G_BotStripWidth             0.025 !
+STRIP_G_BotGapWidth               0.025 !
+STRIP_G_BotNumber                   5 !
 
 SIMION_G_GridSize                0.005 ! grid size in cm
 SIMION_G_EpsScale                16.0 ! epsilon scale relative to epsilon_0

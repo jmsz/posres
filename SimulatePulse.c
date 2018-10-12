@@ -94,9 +94,9 @@ int main ( int argc, char **argv)
 
 //for (k = 0; k < 11; k++){
 //  for (i = 0; i < 300; i++){
-for (k = 0; k < 1; k++){
-  for (i = 0; i < 1; i++){
-  k = 0; i = 0;
+for (k = 0; k < 300; k++){ // k from 0 to 10 should cover
+  for (i = 0; i < 12; i++){ // i from 0 to 300 should cover
+  //k = 0; i = 0;
   //for (i = 0; i < (width/0.01 + 1); i++){
 	printf("HEIGHT  %lf \n", height);
 	printf("POINT IN Z %lf \n",  height - (height*k/nz)) - 0.1;
@@ -106,21 +106,16 @@ for (k = 0; k < 1; k++){
 	evt = new_event();
 	//Fill in the Hit Pattern (HP):
 	evt->HP.Eint[0]=1.0;             //Energy of interaction 0 (we only simulate a single interaction here)
-	evt->HP.Eint[1]=0.0;             //Energy of interaction 0 (we only simulate a single interaction here)
 	evt->HP.T0= 0.0;               //Time the interaction occurs in the trace
 
-	evt->HP.Pos[0][0]= (width*2 + 0.06) + i*0.01 + 0.01;//0.36;//(width*1 + 0.06) + i*0.01;//0.085; //(width*1.5 + 0.06);//(1.5 * width) + 0.06;// 0.135+0.015; //(1.5 * width) + 0.06;//0.15 + 0.05*i; //0.15 + 0.01*(i+1);//(width/2.0); //(1.0/10.0)*(i+1);           //Position where this interaction occures (in the plane) ????
-	evt->HP.Pos[0][1]= (width*2 + 0.06) + i*0.01 + 0.01;               //FOR ALL I KNOW THIS SHOULD REMAIN ZERO
-	evt->HP.Pos[0][2]=height - 0.11 - k*.01;      //in cm!
-
-  evt->HP.Pos[0][0]= (width*2 + 0.06) + i*0.04 + 0.01;//0.36;//(width*1 + 0.06) + i*0.01;//0.085; //(width*1.5 + 0.06);//(1.5 * width) + 0.06;// 0.135+0.015; //(1.5 * width) + 0.06;//0.15 + 0.05*i; //0.15 + 0.01*(i+1);//(width/2.0); //(1.0/10.0)*(i+1);           //Position where this interaction occures (in the plane) ????
-	evt->HP.Pos[0][1]= (width*2 + 0.06) + i*0.04 + 0.01;               //FOR ALL I KNOW THIS SHOULD REMAIN ZERO
-	evt->HP.Pos[0][2]=height - 0.11 - k*.04;      //in cm!
-
-	double x_position =(width*2 + 0.06)+ i*0.01 + 0.01;// 0.36;//(width*1 + 0.06)+ i*0.01;//0.085; //(width*1.5 + 0.06); //(width + 0.06) + 0.01*i;//0.135 + 0.015;//(1.5 * width) + 0.06;// 0.15 + 0.05*i ;// 0.21 //0.15 + 0.01*(i+1);;//width/2.0; //(1.0/10.0)*(i+1);   //((random1/ 100.0) + 0.1);
-	double z_position = height - 0.11 - k*.01; // ((random2 / 100.0) - 0.1);
+  evt->HP.Pos[0][0]= 0.1 - 0.025 + i*0.005;//0.36;//(width*1 + 0.06) + i*0.01;//0.085; //(width*1.5 + 0.06);//(1.5 * width) + 0.06;// 0.135+0.015; //(1.5 * width) + 0.06;//0.15 + 0.05*i; //0.15 + 0.01*(i+1);//(width/2.0); //(1.0/10.0)*(i+1);           //Position where this interaction occures (in the plane) ????
+	evt->HP.Pos[0][1]= 0.1;             //FOR ALL I KNOW THIS SHOULD REMAIN ZERO
+	evt->HP.Pos[0][2]= height - 0.11+0.005- k*.005;    //in cm!
+        
+	double x_position = 0.1 - 0.025 + i * 0.005;// 0.36;//(width*1 + 0.06)+ i*0.01;//0.085; //(width*1.5 + 0.06); //(width + 0.06) + 0.01*i;//0.135 + 0.015;//(1.5 * width) + 0.06;// 0.15 + 0.05*i ;// 0.21 //0.15 + 0.01*(i+1);;//width/2.0; //(1.0/10.0)*(i+1);   //((random1/ 100.0) + 0.1);
+	double z_position = height - 0.11 + 0.005 - k * .005; // ((random2 / 100.0) - 0.1);
+        //std::cout<"YYYYYYYYYYYY "<<<z_position<<std::endl;
 /*
-
 
 	//RANDOM POSITIONS
 	float random1 = float((rand() % 70) + 20); //in mm
